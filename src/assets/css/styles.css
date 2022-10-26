@@ -1,0 +1,292 @@
+* {
+    margin: 0px auto;
+    padding: 0px;
+    scroll-behavior: smooth;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Tai Heritage Pro', serif;
+}
+
+::-webkit-scrollbar {
+    width: 0%;
+    background: transparent;
+    height: 0%;
+}
+
+.nav {
+    margin-left: 83%;
+}
+
+.menu-link {
+    text-decoration: none;
+    opacity: 0.35;
+    transition: all 240ms;
+    padding: 0px 14px;
+}
+
+.menu-link:hover {
+    opacity: 0.7;
+}
+
+.clothingParis {
+    text-decoration: none;
+    opacity: 0.9;
+    font-size: 21px;
+    transition: all 300ms;
+}
+
+.button {
+    height: 60px;
+    width: 150px;
+    transition: all 350ms !important;
+    border: 2px solid !important;
+}
+
+.button:hover {
+    background: rgb(33, 37, 41) !important;
+    color: rgb(255, 255, 255) !important;
+    border: rgb(33, 37, 41) !important;
+}
+
+.button-back {
+    height: 60px;
+    width: 150px;
+    transition: all 350ms !important;
+    border: 2px solid !important;
+}
+
+h1,
+h2,
+h3 {
+    height: 60px;
+    line-height: 56px !important;
+    transition: all 300ms;
+}
+
+h3 {
+    line-height: 60px !important;
+}
+
+h1:hover,
+h2:hover,
+.button-back:hover {
+    background: rgb(255, 255, 255) !important;
+    color: rgb(33, 37, 41) !important;
+}
+
+.svg {
+    width: 22px;
+}
+
+.svg-heart {
+    width: 30px;
+    animation: beat 1.5s linear infinite;
+}
+
+@keyframes beat {
+
+    0%,
+    100% {
+        transform: scale(0.8, 0.8);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.product-card {
+    transition: all 300ms;
+    height: 470px !important;
+}
+
+.trolley-card {
+    transition: all 300ms;
+}
+
+.product-card:hover,
+.trolley-card:hover {
+    transform: translateY(-10px);
+}
+
+.footer {
+    height: 70px;
+    line-height: 70px;
+    font-size: 19px;
+}
+
+.error {
+    height: 90vh;
+    padding-top: 37vh !important;
+}
+
+@media (max-width: 2992px) {
+    .product-card {
+        height: 770px !important;
+    }
+}
+
+@media (max-width: 2621px) {
+    .product-card {
+        height: 700px !important;
+    }
+}
+
+@media (max-width: 2400px) {
+    .product-card {
+        height: 580px !important;
+    }
+}
+
+@media (max-width: 1845px) {
+    .product-card {
+        height: 460px !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    .nav {
+        margin-left: 79.5%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav {
+        margin-left: 75.5%;
+    }
+}
+
+@media (max-width: 1168px) {
+    .product-card {
+        height: 360px !important;
+    }
+}
+
+@media (max-width: 1025px) {
+    #h2-bought{
+        width: 65% !important;
+    } 
+}
+
+@media (max-width: 992px) {
+    .clothingParis {
+        margin: 0px !important;
+    }
+
+    .nav {
+        margin-left: 0%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        height: 770px !important;
+    }
+
+    .h2-purchease {
+        font-size: 22px;
+    }
+
+    #h2-bought{
+        width: 80% !important;
+    } 
+}
+
+@media (max-width: 682px) {
+    .product-card {
+        height: 690px !important;
+    }
+}
+
+@media (max-width: 583px) {
+    .product-card {
+        height: 610px !important;
+    }
+
+    .h2-purchease {
+        font-size: 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 20px !important;
+    }
+    
+    #bought-top{
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .product-card {
+        height: 530px !important;
+    }
+
+    .h2-purchease {
+        font-size: 16px;
+    }
+
+    #h2-bought{
+        width: 100% !important;
+    } 
+
+    #bought-top{
+        font-size: 13px !important;
+    }
+}
+
+@media (max-width: 417px) {
+    .product-card {
+        height: 480px !important;
+    }
+
+    .h2-purchease {
+        font-size: 13px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 16px !important;
+    }
+
+    #bought-top{
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    #bought-top{
+        font-size: 10px !important;
+    }
+}
+
+@media (max-width: 355px) {
+    .h2-purchease {
+        font-size: 11px;
+    }
+
+    #h2-bought{
+        font-size: 10px !important;
+    } 
+}
+
+@media (max-width: 318px) {
+    .product-card {
+        height: 420px !important;
+    }
+
+    .h2-purchease {
+        font-size: 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 14px !important;
+    }
+
+    #bought-top{
+        font-size: 7px !important;
+    }
+}
