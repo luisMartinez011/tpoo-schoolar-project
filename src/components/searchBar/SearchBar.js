@@ -12,7 +12,7 @@ const SearchBar = () => {
     const options = data.map(({ title }) => {
         return title
     })
-    console.log(options)
+
     return (
         // <Form className="d-flex me-0">
         //     <Form.Control
