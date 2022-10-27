@@ -9,7 +9,7 @@ import { Context } from '../UseContext/Context';
 
 export const ListProducts = () => {
 
-  let { setFavorites, setTrolley } = useContext(Context);
+  let { setFavorites, setTrolley, setData } = useContext(Context);
 
   const [dataProducts, setdataProducts] = useState([]);
   const [cargando, setCargando] = useState(true);
@@ -20,6 +20,7 @@ export const ListProducts = () => {
     const request = await fetch('https://fakestoreapi.com/products');
     const data = await request.json();
 
+    setData(data)
     setdataProducts(data);
     setCargando(false);
   }

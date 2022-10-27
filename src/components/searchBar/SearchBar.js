@@ -1,36 +1,43 @@
 import Form from 'react-bootstrap/Form';
-import React, { useState } from "react";
-
+import React, { useState, useContext } from "react";
+import {
+    Typeahead
+} from 'react-bootstrap-typeahead';
 import Button from 'react-bootstrap/Button';
-
+import { Context } from '../../UseContext/Context';
 const SearchBar = () => {
-    const [message, setMessage] = useState('');
+    const [singleSelections, setSingleSelections] = useState([]);
+    const { data } = useContext(Context);
 
-    const handleChange = event => {
-        setMessage(event.target.value);
-
-        console.log('value is:', event.target.value);
-    };
-    // const onSubmit = (e) => {
-    //     e.preventDefault();
-    //     onSubmit(value);
-    //     onClose();
-    // };
-
+    const options = data.map(({ title }) => {
+        return title
+    })
+    console.log(options)
     return (
-        <Form className="d-flex me-0">
-            <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search" onChange={handleChange}
-                value={message} >
+        // <Form className="d-flex me-0">
+        //     <Form.Control
+        //         type="search"
+        //         placeholder="Search"
+        //         className="me-2"
+        //         aria-label="Search" onChange={handleChange}
+        //         value={message} >
 
-            </Form.Control>
+        //     </Form.Control>
+        //     <Button variant="outline-success">Search</Button>
+
+        // </Form>
+        <Form.Group className="d-flex me-0">
+            <Form.Label>Single Selection</Form.Label>
+            <Typeahead
+                id="basic-typeahead-single"
+                labelKey="name"
+                onChange={setSingleSelections}
+                options={options}
+                placeholder="Choose a state..."
+                selected={singleSelections}
+            />
             <Button variant="outline-success">Search</Button>
-
-        </Form>
-
+        </Form.Group>
     )
 }
 

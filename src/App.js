@@ -10,7 +10,7 @@ function App() {
 
   //Send the information to Favorites
   const [favorites, setFavorites] = useState('');
-
+  const [data, setData] = useState([])
   useEffect(() => {
     if (favorites !== '') {
       let storageFav = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -38,7 +38,7 @@ function App() {
       const hasMap = {};
       storageTrolley = storageTrolley.filter((item, _) => {
         let exists = hasMap.hasOwnProperty(item.id)
-        
+
         return exists ? false : hasMap[item.id] = 1;
       });
 
@@ -54,7 +54,9 @@ function App() {
         trolley,
         setTrolley,
         setBoughtThings,
-        boughtThings
+        boughtThings,
+        data,
+        setData
       }}
     >
       <AppRoutes />
