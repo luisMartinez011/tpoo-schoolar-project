@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tpoo-schoolar-project/static/css/main.68ce5905.css",
-    "main.js": "/tpoo-schoolar-project/static/js/main.87d1be2e.js",
+    "main.js": "/tpoo-schoolar-project/static/js/main.f94bbc60.js",
     "static/media/boots3.jpg": "/tpoo-schoolar-project/static/media/boots3.6dd86fa95e3a7e25d73c.jpg",
     "static/media/boots2.jpg": "/tpoo-schoolar-project/static/media/boots2.45cfd7050f5f70de1ff5.jpg",
     "static/media/boots1.jpg": "/tpoo-schoolar-project/static/media/boots1.1f6a696ed9d4f5c689a8.jpg",
@@ -9,10 +9,10 @@
     "index.html": "/tpoo-schoolar-project/index.html",
     "static/media/heart.svg": "/tpoo-schoolar-project/static/media/heart.3486cd80ed8e535b56c02c6ee3831791.svg",
     "main.68ce5905.css.map": "/tpoo-schoolar-project/static/css/main.68ce5905.css.map",
-    "main.87d1be2e.js.map": "/tpoo-schoolar-project/static/js/main.87d1be2e.js.map"
+    "main.f94bbc60.js.map": "/tpoo-schoolar-project/static/js/main.f94bbc60.js.map"
   },
   "entrypoints": [
     "static/css/main.68ce5905.css",
-    "static/js/main.87d1be2e.js"
+    "static/js/main.f94bbc60.js"
   ]
 }
