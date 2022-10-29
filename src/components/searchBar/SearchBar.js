@@ -38,7 +38,7 @@ const SearchBar = () => {
         <Form className="d-flex  justify-content-center me-0" onSubmit={handleSubmit}>
 
             <Typeahead
-                disabled={(location.pathname === "/home") ? false : true}
+                disabled={(location.pathname === "/home" || location.pathname === "/") ? false : true}
                 className='m-0'
                 id="basic-typeahead-single"
                 labelKey="name"
