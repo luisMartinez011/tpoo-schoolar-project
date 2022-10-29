@@ -9,9 +9,8 @@ import { Context } from '../UseContext/Context';
 
 export const ListProducts = () => {
 
-  let { setFavorites, setTrolley, setData } = useContext(Context);
+  let { setFavorites, setTrolley, setdataProducts, dataProducts, setData } = useContext(Context);
 
-  const [dataProducts, setdataProducts] = useState([]);
   const [cargando, setCargando] = useState(true);
   // const[categorias, setCategorias] = useState([]);
 

@@ -1,5 +1,5 @@
 import Form from 'react-bootstrap/Form';
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useMemo } from "react";
 import {
     Typeahead
 } from 'react-bootstrap-typeahead';
@@ -7,12 +7,17 @@ import Button from 'react-bootstrap/Button';
 import { Context } from '../../UseContext/Context';
 const SearchBar = () => {
     const [singleSelections, setSingleSelections] = useState([]);
-    const { data } = useContext(Context);
+    const { setdataProducts, data } = useContext(Context);
+    const options = useMemo(() => data.map(({ title }) => title), [data]);
 
-    const options = data.map(({ title }) => {
-        return title
-    })
+    if (singleSelections.length === 0) setdataProducts(data)
+    const handleSubmit = (e) => {
 
+        e.preventDefault();
+        setdataProducts([data.find(({ title }) => {
+            return title === singleSelections.toString()
+        })])
+    }
     return (
         // <Form className="d-flex me-0">
         //     <Form.Control
@@ -26,18 +31,19 @@ const SearchBar = () => {
         //     <Button variant="outline-success">Search</Button>
 
         // </Form>
-        <Form.Group className="d-flex me-0">
-            <Form.Label>Single Selection</Form.Label>
+        <Form className="d-flex  justify-content-center me-0" onSubmit={handleSubmit}>
+
             <Typeahead
+                className='m-0'
                 id="basic-typeahead-single"
                 labelKey="name"
                 onChange={setSingleSelections}
                 options={options}
-                placeholder="Choose a state..."
+                placeholder="Choose a product..."
                 selected={singleSelections}
             />
-            <Button variant="outline-success">Search</Button>
-        </Form.Group>
+            <Button className="ms-2" variant="outline-success" type="submit">Search</Button>
+        </Form>
     )
 }
 

@@ -10,6 +10,7 @@ function App() {
 
   //Send the information to Favorites
   const [favorites, setFavorites] = useState('');
+  const [dataProducts, setdataProducts] = useState([])
   const [data, setData] = useState([])
   useEffect(() => {
     if (favorites !== '') {
@@ -55,6 +56,8 @@ function App() {
         setTrolley,
         setBoughtThings,
         boughtThings,
+        dataProducts,
+        setdataProducts,
         data,
         setData
       }}
